@@ -1,12 +1,12 @@
-import { Text } from "@chakra-ui/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "~/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Header from "~/components/Header";
-import Link from "next/link";
+import { Text } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,6 +24,11 @@ export default function RootLayout({
         <ChakraProvider>
           <Header />
           {children}
+          <Link className="underline mb-4 ml-auto mr-auto block w-fit" href="/">
+            <Text fontSize="lg" color="blue.500">
+              TOPへ
+            </Text>
+          </Link>
         </ChakraProvider>
       </body>
     </html>

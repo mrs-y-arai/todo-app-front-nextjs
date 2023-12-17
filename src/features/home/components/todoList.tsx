@@ -33,7 +33,12 @@ export default function TodoList({ todoList }: Props) {
                 <>
                   <Text>{item.name}</Text>
                   <NextLink href={`/todo/${item._id}`}>
-                    <Button colorScheme="blue" size="sm">
+                    <Button
+                      fontSize="16px"
+                      width="56px"
+                      colorScheme="blue"
+                      size="sm"
+                    >
                       編集
                     </Button>
                   </NextLink>
